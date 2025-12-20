@@ -1,0 +1,261 @@
+{
+    "navbar": {
+        "features": "Features",
+        "lecturers": "For Lecturers",
+        "students": "For Students",
+        "support": "Support",
+        "download_app": "Download App"
+    },
+    "hero": {
+        "badge": "🚀 The #1 App for Universities",
+        "title_start": "Education,",
+        "title_end": "Reimagined.",
+        "description": "Taalomy connects lecturers and students seamlessly. Manage classes, track revenue, and master your studies in one premium ecosystem.",
+        "download_btn": "Download App",
+        "learn_more_btn": "Learn More",
+        "revenue_label": "Revenue",
+        "trusted_by": "Trusted by Top Universities"
+    },
+    "downloads": {
+        "title": "Download the App",
+        "subtitle": "Choose your platform and get started today.",
+        "student_label": "For Students",
+        "lecturer_label": "For Lecturers",
+        "app_store": "App Store",
+        "google_play": "Google Play",
+        "trusted_badges": {
+            "ssl": "SSL Secured",
+            "verified": "Verified Tutors",
+            "support": "24/7 Support"
+        }
+    },
+    "how_it_works": {
+        "title": "How It Works",
+        "subtitle": "Getting started with Taalomy is simple. Choose your path below.",
+        "toggle_student": "I am a Student",
+        "toggle_lecturer": "I am a Lecturer",
+        "student_steps": [
+            {
+                "title": "Create Account",
+                "desc": "Download the app and sign up in seconds using your university email."
+            },
+            {
+                "title": "Find Your Subject",
+                "desc": "Search for specific courses or browse top-rated lecturers."
+            },
+            {
+                "title": "Book a Session",
+                "desc": "Choose a time that works for you and pay securely via the app."
+            },
+            {
+                "title": "Start Learning",
+                "desc": "Join the video session or chat room and boost your grades."
+            }
+        ],
+        "lecturer_steps": [
+            {
+                "title": "Register Profile",
+                "desc": "Sign up and submit your professional credentials for review."
+            },
+            {
+                "title": "Get Verified",
+                "desc": "Our team approves your profile within 24 hours."
+            },
+            {
+                "title": "Set Availability",
+                "desc": "Define your schedule and set your own rates per session."
+            },
+            {
+                "title": "Start Earning",
+                "desc": "Accept booking requests and receive automated payouts."
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "q": "Is my payment information secure?",
+                "a": "Absolutely. We use industry-standard encryption and partner with certified payment gateways (Mada, Visa, Apple Pay) to ensure your data is never compromised."
+            },
+            {
+                "q": "How long does lecturer verification take?",
+                "a": "We prioritize quality and safety. Our verification team typically reviews documents within 24-48 hours. You will be notified via email once approved."
+            },
+            {
+                "q": "Can I cancel a booked session?",
+                "a": "Yes. Students can cancel up to 24 hours before the session for a full refund. Please refer to our Refund Policy for more details."
+            },
+            {
+                "q": "Is the app free to download?",
+                "a": "Yes! The Taalomy app is free to download for both students and lecturers. Students only pay when booking sessions, and lecturers keep the majority of their earnings."
+            }
+        ]
+    },
+    "student_section": {
+        "title": "The Ultimate Student Companion",
+        "subtitle": "Everything you need to ace your university journey in one app.",
+        "features": [
+            {
+                "title": "Smart Booking System",
+                "desc": "Browse profiles of top lecturers, view their real-time availability, and book 1-on-1 or group sessions instantly."
+            },
+            {
+                "title": "Secure Payments",
+                "desc": "Pay for sessions securely using Apple Pay, Mada, Visa, or Mastercard. Your transaction data is encrypted and protected."
+            },
+            {
+                "title": "Interactive Learning",
+                "desc": "Access live sessions, view recorded lectures, and chat directly with your lecturers for follow-up questions."
+            },
+            {
+                "title": "Progress Tracking",
+                "desc": "Visualize your academic performance with intuitive charts tracking your attendance and grades over time."
+            }
+        ]
+    },
+    "lecturer_section": {
+        "title": "Empowering Educators",
+        "subtitle": "A professional suite of tools designed to manage your teaching business.",
+        "verification": {
+            "title": "Detailed Verification Process",
+            "desc": "To ensure quality, all lecturers undergo a rigorous vetting process. You will need to upload valid ID and academic credentials (PhD/Masters) which are manually reviewed by our compliance team."
+        },
+        "payments": {
+            "title": "Guaranteed Payouts",
+            "desc": "Link your bank account for automatic weekly transfers. We support all major local banks and ensure you are paid for every completed session."
+        },
+        "features": [
+            {
+                "title": "Professional Profile",
+                "desc": "Showcase your expertise, qualifications, and student reviews in a polished public profile."
+            },
+            {
+                "title": "Automated Admin",
+                "desc": "Let the app handle scheduling, reminders, and attendance tracking so you can focus purely on teaching."
+            }
+        ]
+    },
+    "support_section": {
+        "title": "24/7 Customer Support",
+        "subtitle": "We are always here for you.",
+        "desc": "Our dedicated support team is available around the clock to assist with account verification, technical issues, or booking inquiries. Reach us directly through the in-app chat for instant assistance.",
+        "cta": "Contact Support"
+    },
+    "features": {
+        "title": "Everything You Need to Succeed",
+        "subtitle": "Packed with powerful features designed for the modern university experience.",
+        "list": [
+            {
+                "title": "Smart Scheduling",
+                "description": "Your entire academic calendar, automatically organized. Never miss a lecture or assignment deadline again."
+            },
+            {
+                "title": "Seamless Payments",
+                "description": "Lecturers receive earnings directly. Secure, transparent, and instant financial tracking."
+            },
+            {
+                "title": "Direct Communication",
+                "description": "Chat with peers and lecturers in real-time. Dedicated channels for every class and group."
+            },
+            {
+                "title": "Performance Analytics",
+                "description": "Detailed insights into attendance and grades. Visualise your academic progress effortlessly."
+            },
+            {
+                "title": "Secure & Private",
+                "description": "Enterprise-grade security keeps your data safe. Privacy controls that put you in charge."
+            },
+            {
+                "title": "Class Management",
+                "description": "Lecturers can easily manage intake, attendance, and student performance in one dashboard."
+            }
+        ]
+    },
+    "earn_money": {
+        "total_earnings": "Total Earnings",
+        "title_start": "Monetize Your",
+        "title_highlight": "Academic Expertise",
+        "description": "Join hundreds of lecturers who use Taalomy to manage their private classes. Set your own rates, track attendance automatically, and get paid securely.",
+        "benefits": [
+            "Flexible Payouts (Hourly, Per Class, Term)",
+            "Automated Attendance Tracking",
+            "Direct Student Communication Channels",
+            "Detailed Financial Analytics"
+        ],
+        "cta": "Start Teaching Today",
+        "cards": {
+            "physics": "Advanced Physics",
+            "algo": "Intro to Algorithms",
+            "db": "Database Systems",
+            "time_2h": "2h ago",
+            "time_5h": "5h ago",
+            "time_1d": "1d ago"
+        }
+    },
+    "footer": {
+        "brand_desc": "The complete academic ecosystem for modern universities. Connecting students and lecturers in one seamless platform.",
+        "platform": "Platform",
+        "company": "Company",
+        "copyright": "© 2025 Taalomy Inc. All rights reserved.",
+        "links": {
+            "features": "Features",
+            "lecturers": "For Lecturers",
+            "students": "For Students",
+            "pricing": "Pricing",
+            "security": "Security",
+            "about": "About Us",
+            "team": "Team",
+            "careers": "Careers",
+            "contact": "Contact",
+            "privacy": "Privacy Policy"
+        }
+    },
+    "disclaimer": "LEGAL DISCLAIMER AND LIMITATION OF LIABILITY\n\nUsers acknowledge and agree that they use the Taalomy platform and services at their own sole risk. Taalomy is a facilitator of educational connections and does not guarantee the quality, accuracy, or safety of services provided by third-party lecturers or users.\n\nTo the fullest extent permitted by law, Taalomy, its officers, directors, employees, and agents disclaim all warranties, express or implied, in connection with the site and your use thereof. We are not obligated to intervene in disputes between users but may choose to do so at our sole discretion to ensure platform integrity.",
+    "about_us": {
+        "title": "About Us",
+        "content": "Taalomy is the premier educational technology platform in the Middle East and North Africa, dedicated to transforming the traditional academic landscape into a dynamic, digital ecosystem. Established in 2024 in Cairo, Egypt, our mission is to eliminate the administrative and logistical frictions that hinder true learning.\n\nWe recognize the challenges faced by both students and lecturers in the modern university environment—from scheduling conflicts and payment delays to fragmented communication channels. Taalomy solves these by providing a unified, secure, and intuitive platform where: \n\n• Lecturers\n can effortlessly manage their courses, automate attendance, ensuring fair compensation for their expertise.\n\n• Students\n can access high-quality supplemental education, organize their schedules, and track their academic progress with precision.\n\nInnovation is at our core. We strictly adhere to global standards of data privacy and security, ensuring that our community can focus on what matters most: the exchange of knowledge.",
+        "mission": "Our vision is to empower every academic interaction with technology, making education more accessible, transparent, and effective for everyone."
+    },
+    "contact_us": {
+        "title": "Get in Touch",
+        "subtitle": "We are here to help. Whether you have a question about our features, pricing, or need technical support, our team is ready to assist you.",
+        "address_label": "Headquarters",
+        "address": "Cairo, Egypt",
+        "email_label": "Email Support",
+        "phone_label": "Customer Service",
+        "form": {
+            "title": "Send a Message",
+            "name": "Full Name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Send Message"
+        }
+    },
+    "privacy_policy": {
+        "title": "Privacy Policy",
+        "content": "Last Updated: January 1, 2025\n\n1. Introduction\nWelcome to Taalomy. We are committed to protecting your personal information and your right to privacy. Using our app and website constitutes your acceptance of this policy.\n\n2. Information We Collect\nWe collect personal information that you voluntarily provide to us when you register on the Services, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.\n• Personal Data: Name, email address, phone number, university credentials, and profile image.\n• Financial Data: Payment method details (processed securely by third-party payment processors).\n• Usage Data: Information about how you use our website/app, including access times, pages viewed, and IP address.\n\n3. How We Use Your Information\nWe use personal information collected via our Services for a variety of business purposes described below:\n• To facilitate account creation and logon process.\n• To send administrative information to you.\n• To fulfill and manage your orders and payments.\n• To protect our Services (e.g., fraud monitoring and prevention).\n• To enforce our terms, conditions, and policies.\n\n4. Disclosure of Your Information\nWe may process or share your data that we hold based on the following legal basis:\n• Consent: We may process your data if you have given us specific consent to use your personal information for a specific purpose.\n• Legitimate Interests: We may process your data when it is reasonably necessary to achieve our legitimate business interests.\n• Legal Obligations: We may disclose your information where we are legally required to do so in order to comply with applicable law, governmental requests, a judicial proceeding, court order, or legal process.\n\n5. Data Security\nWe have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.\n\n6. Your Privacy Rights\nYou have the right to request access to, correction of, or deletion of your personal data. You may also object to processing or request data portability. To exercise these rights, please contact us at support@taalomy.com.\n\n7. Contact Us\nIf you have questions or comments about this policy, you may email us at support@taalomy.com or by post to: Taalomy HQ, Cairo, Egypt."
+    },
+    "refund_policy": {
+        "title": "Refund Policy",
+        "content": "Last Updated: January 1, 2025\n\nAt Taalomy, we strive to ensure a fair and transparent experience for both students and lecturers. Please read our refund policy carefully.\n\n1. General Principle\nTaalomy is a platform facilitating connections and payments between students and lecturers. While we do not directly provide the educational content, we facilitate the resolution of disputes regarding payments.\n\n2. Refund Eligibility\nRefunds may be considered under the following circumstances:\n• Cancellation by Lecturer: If a lecturer cancels a scheduled session or course, students are entitled to a full refund of the session fee.\n• Technical Failure: If a technical failure on the Taalomy platform prevents the session from taking place, a full refund will be issued.\n• Non-Delivery: If a lecturer fails to attend a scheduled session without prior notice (No-Show), the student is eligible for a refund pending verification.\n\n3. Non-Refundable Scenarios\n• Completed Sessions: Refunds are not issued for sessions that have already taken place and were attended by the student.\n• Student Cancellations (Late): Cancellations made by the student less than 24 hours before the scheduled start time are typically non-refundable to compensate the lecturer for their reserved time.\n• Dissatisfaction with Content: Refunds based solely on personal dissatisfaction with the lecturer's teaching style or content quality are subject to review and are generally not granted unless there is a clear violation of our terms.\n\n4. Refund Process\nTo request a refund, please contact our support team at support@taalomy.com within 48 hours of the incident. Include your transaction ID, session details, and a brief explanation. Approved refunds will be processed back to the original payment method within 5-10 business days."
+    },
+    "exchange_policy": {
+        "title": "Exchange Policy",
+        "content": "Last Updated: January 1, 2025\n\n1. Scope\nAs Taalomy deals primarily with digital bookings and educational services, the traditional concept of exchanging physical goods does not apply.\n\n2. Rescheduling as Exchange\nWe recognize that plans change. Users may request to 'exchange' a booked time slot for another time slot with the same lecturer, subject to the following conditions:\n• Availability: The desired new time slot must be available in the lecturer's schedule.\n• Notice Period: Requests for rescheduling must be made at least 24 hours in advance of the original session time.\n• Lecturer Approval: Some rescheduling requests may require direct approval from the lecturer.\n\n3. Course Transfers\nIn cases where a student has purchased a package or term-long course, transferring enrollment to a different course by the same lecturer may be possible upon request and is subject to price adjustments if applicable.\n\n4. Contact\nFor assistance with rescheduling or course transfers, please use the in-app support tools or contact support@taalomy.com."
+    },
+    "shipping_policy": {
+        "title": "Shipping Policy",
+        "content": "Last Updated: January 1, 2025\n\n1. Digital Services Only\nTaalomy is a strictly digital platform providing Educational Technology services. We do not sell, ship, or deliver physical products (such as textbooks, hardware, or merchandise) to user addresses.\n\n2. No Shipping Fees\nSince there are no physical goods, there are absolutely no shipping fees, handling charges, or delivery surcharges associated with the use of our platform.\n\n3. Address Information\nAny address information collected during registration or checkout is used solely for billing verification, tax compliance, and identity validation purposes."
+    },
+    "delivery_policy": {
+        "title": "Delivery Policy",
+        "content": "Last Updated: January 1, 2025\n\n1. Method of Delivery\nAll services and content purchased through Taalomy are delivered electronically via the internet. \n\n2. Timing of Delivery\n• Account Access: Access to your user account is immediate upon successful registration and email verification.\n• Premium Features: Access to paid features or subscriptions is granted immediately upon confirmation of successful payment.\n• Live Sessions: Access links to live video sessions or classrooms are made available 10-15 minutes prior to the scheduled start time.\n• Recorded Content: If applicable, recorded lectures or materials are accessible immediately after purchase or as released by the lecturer.\n\n3. Delivery Failures\nIf you do not receive access to a purchased service immediately (typically within 15 minutes of payment), please check your email spam folder for confirmation details or check your internet connection. If the issue persists, contact us immediately at support@taalomy.com with your transaction details for prompt resolution."
+    },
+    "not_found": {
+        "title": "Page Not Found",
+        "desc": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+        "back_home": "Back to Home"
+    }
+}
