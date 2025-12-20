@@ -1,6 +1,32 @@
 import { useEffect, useRef } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 
+class Particle {
+    x: number;
+    y: number;
+    size: number;
+    baseAlpha: number;
+    activeAlpha: number;
+    speed: number;
+    offset: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 2 + 1; // Random size between 1 and 3
+        this.baseAlpha = 0.1; // Faint base visibility
+        this.activeAlpha = Math.random() * 0.5 + 0.2; // Max brightness
+        this.speed = Math.random() * 0.002 + 0.001; // Slow pulsation
+        this.offset = Math.random() * Math.PI * 2; // Random starting phase
+    }
+
+    update(time: number) {
+        // Sine wave pulsation for opacity
+        const alpha = this.baseAlpha + Math.abs(Math.sin(time * this.speed + this.offset)) * (this.activeAlpha - this.baseAlpha);
+        return alpha;
+    }
+}
+
 const AnimatedBackground = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const { theme } = useTheme();
@@ -21,31 +47,7 @@ const AnimatedBackground = () => {
             initParticles();
         };
 
-        class Particle {
-            x: number;
-            y: number;
-            size: number;
-            baseAlpha: number;
-            activeAlpha: number;
-            speed: number;
-            offset: number;
 
-            constructor(x: number, y: number) {
-                this.x = x;
-                this.y = y;
-                this.size = Math.random() * 2 + 1; // Random size between 1 and 3
-                this.baseAlpha = 0.1; // Faint base visibility
-                this.activeAlpha = Math.random() * 0.5 + 0.2; // Max brightness
-                this.speed = Math.random() * 0.002 + 0.001; // Slow pulsation
-                this.offset = Math.random() * Math.PI * 2; // Random starting phase
-            }
-
-            update(time: number) {
-                // Sine wave pulsation for opacity
-                const alpha = this.baseAlpha + Math.abs(Math.sin(time * this.speed + this.offset)) * (this.activeAlpha - this.baseAlpha);
-                return alpha;
-            }
-        }
 
         const initParticles = () => {
             particles = [];

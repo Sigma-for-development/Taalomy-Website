@@ -5,12 +5,18 @@ interface LegalPageProps {
     translationKey: string;
 }
 
+import SEO from '../components/SEO';
+
 const LegalPage = ({ translationKey }: LegalPageProps) => {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.language === 'ar';
 
     return (
         <div className="pt-32 pb-20 min-h-screen bg-background">
+            <SEO
+                title={t(`${translationKey}.title`)}
+                description={t(`${translationKey}.content`).substring(0, 150) + '...'}
+            />
             <div className="container mx-auto px-6 max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

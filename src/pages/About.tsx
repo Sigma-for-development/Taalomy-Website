@@ -1,12 +1,18 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+import SEO from '../components/SEO';
+
 const About = () => {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.language === 'ar';
 
     return (
         <div className="pt-32 pb-20 min-h-screen bg-background">
+            <SEO
+                title={t('about_us.title')}
+                description={t('about_us.content').substring(0, 150) + '...'}
+            />
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

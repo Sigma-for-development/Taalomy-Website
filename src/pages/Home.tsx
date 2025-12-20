@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AppDownloads from '../components/AppDownloads';
 import HowItWorks from '../components/HowItWorks';
@@ -26,6 +27,7 @@ const Home = () => {
 
     return (
         <main>
+            <SEO />
             <Hero />
             <HowItWorks />
             <AppDownloads />

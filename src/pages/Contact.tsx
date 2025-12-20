@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
+import SEO from '../components/SEO';
+
 const Contact = () => {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.language === 'ar';
@@ -17,6 +19,10 @@ const Contact = () => {
 
     return (
         <div className="pt-32 pb-20 min-h-screen bg-background">
+            <SEO
+                title={t('contact_us.title')}
+                description={t('contact_us.subtitle')}
+            />
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const NotFound = () => {
     const { t, i18n } = useTranslation();
@@ -9,6 +10,7 @@ const NotFound = () => {
 
     return (
         <div className="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
+            <SEO title="404: Not Found" />
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
