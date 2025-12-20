@@ -22,19 +22,19 @@ const HowItWorks = () => {
         <section className="py-20 bg-surface/20" id="features">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('how_it_works.title')}</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">{t('how_it_works.title')}</h2>
                     <p className="text-text-secondary text-lg mb-8">{t('how_it_works.subtitle')}</p>
 
-                    <div className="bg-surface border border-white/10 p-1 rounded-xl inline-flex gap-2">
+                    <div className="bg-surface border border-text-primary/10 p-1 rounded-xl inline-flex gap-2">
                         <button
                             onClick={() => setActiveTab('student')}
-                            className={`px-6 py-3 rounded-lg font-bold transition-all ${activeTab === 'student' ? 'bg-primary text-white shadow-lg' : 'text-text-secondary hover:text-white'}`}
+                            className={`px-6 py-3 rounded-lg font-bold transition-all ${activeTab === 'student' ? 'bg-primary text-white shadow-lg' : 'text-text-secondary hover:text-text-primary'}`}
                         >
                             {t('how_it_works.toggle_student')}
                         </button>
                         <button
                             onClick={() => setActiveTab('lecturer')}
-                            className={`px-6 py-3 rounded-lg font-bold transition-all ${activeTab === 'lecturer' ? 'bg-primary text-white shadow-lg' : 'text-text-secondary hover:text-white'}`}
+                            className={`px-6 py-3 rounded-lg font-bold transition-all ${activeTab === 'lecturer' ? 'bg-primary text-white shadow-lg' : 'text-text-secondary hover:text-text-primary'}`}
                         >
                             {t('how_it_works.toggle_lecturer')}
                         </button>
@@ -56,14 +56,14 @@ const HowItWorks = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -20 }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="relative bg-background border border-white/10 p-6 rounded-2xl z-10 hover:border-primary/50 transition-colors"
+                                        className="relative bg-background border border-text-primary/10 p-6 rounded-2xl z-10 hover:border-primary/50 transition-colors"
                                     >
                                         <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white mb-6 bg-primary`}>
                                             <Icon size={20} />
                                         </div>
-                                        <div className="text-5xl font-bold text-white/5 absolute top-4 right-4">{index + 1}</div>
+                                        <div className="text-5xl font-bold text-text-primary/10 absolute top-4 right-4">{index + 1}</div>
 
-                                        <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                                        <h3 className="text-xl font-bold text-text-primary mb-2">{step.title}</h3>
                                         <p className="text-text-secondary text-sm">{step.desc}</p>
                                     </motion.div>
                                 );

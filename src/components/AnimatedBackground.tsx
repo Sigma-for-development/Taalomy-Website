@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const AnimatedBackground = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const { theme } = useTheme();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -69,7 +71,11 @@ const AnimatedBackground = () => {
 
             particles.forEach(p => {
                 const alpha = p.update(time);
-                ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+                // Use white dots for dark mode, black dots for light mode
+                const r = theme === 'dark' ? 255 : 0;
+                const g = theme === 'dark' ? 255 : 0;
+                const b = theme === 'dark' ? 255 : 0;
+                ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size / 2, 0, Math.PI * 2);
                 ctx.fill();
@@ -86,7 +92,7 @@ const AnimatedBackground = () => {
             window.removeEventListener('resize', resize);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [theme]); // Re-run effect when theme changes to update color logic dynamically
 
     return (
         <canvas
@@ -94,7 +100,7 @@ const AnimatedBackground = () => {
             className="fixed inset-0 w-full h-full pointer-events-none"
             style={{
                 zIndex: 0,
-                opacity: 0.4 // Global opacity control
+                opacity: theme === 'dark' ? 0.4 : 0.15 // Lower opacity for black dots in light mode
             }}
         />
     );

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        surface: '#1a1a1a',
+        background: 'rgb(var(--bg-background) / <alpha-value>)',
+        surface: 'rgb(var(--bg-surface) / <alpha-value>)',
         primary: {
           DEFAULT: '#3498db',
           dark: '#2980b9',
@@ -16,9 +17,9 @@ export default {
         },
         secondary: '#2c3e50',
         text: {
-          primary: '#ecf0f1',
-          secondary: '#bdc3c7',
-          muted: '#95a5a6',
+          primary: 'rgb(var(--text-primary) / <alpha-value>)',
+          secondary: 'rgb(var(--text-secondary) / <alpha-value>)',
+          muted: 'rgb(var(--text-muted) / <alpha-value>)',
         },
         card: 'rgba(255, 255, 255, 0.05)',
       },

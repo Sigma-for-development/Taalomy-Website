@@ -1,20 +1,23 @@
 import { Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../contexts/ThemeContext';
 
 import LogoImage from '../assets/images/no background text/textlogo-nobk.png';
+import LogoImageLight from '../assets/images/no background text/textlogo-lightbk.png';
 
 const Footer = () => {
     const { t, i18n } = useTranslation();
+    const { theme } = useTheme();
     const isRTL = i18n.language === 'ar';
 
     return (
-        <footer className="bg-background border-t border-white/10 pt-20 pb-10">
+        <footer className="bg-background border-t border-text-primary/10 pt-20 pb-10">
             <div className="container mx-auto px-6">
                 <div className={`grid md:grid-cols-4 gap-12 mb-16 ${isRTL ? 'text-right' : 'text-left'}`}>
                     <div className="col-span-1 md:col-span-2">
                         <div className="mb-4">
-                            <img src={LogoImage} alt="Taalomy Logo" className="h-8 md:h-10 w-auto" />
+                            <img src={theme === 'dark' ? LogoImage : LogoImageLight} alt="Taalomy Logo" className="h-8 md:h-10 w-auto" />
                         </div>
                         <p className="text-text-secondary max-w-sm">
                             {t('footer.brand_desc')}
@@ -22,7 +25,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6">{t('footer.platform')}</h4>
+                        <h4 className="text-text-primary font-bold mb-6">{t('footer.platform')}</h4>
                         <ul className="space-y-4">
                             {[
                                 { label: t('footer.links.features'), href: '/#features' },
@@ -43,7 +46,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6">{t('footer.company')}</h4>
+                        <h4 className="text-text-primary font-bold mb-6">{t('footer.company')}</h4>
                         <ul className="space-y-4">
                             {[
                                 { label: t('footer.links.about'), href: '/about' },
@@ -57,24 +60,24 @@ const Footer = () => {
                             ))}
                         </ul>
                         <div className="mt-6 flex flex-wrap gap-4 text-sm px-1">
-                            <Link to="/refund" className="text-text-muted hover:text-white transition-colors">{t('refund_policy.title')}</Link>
-                            <Link to="/exchange" className="text-text-muted hover:text-white transition-colors">{t('exchange_policy.title')}</Link>
-                            <Link to="/shipping" className="text-text-muted hover:text-white transition-colors">{t('shipping_policy.title')}</Link>
-                            <Link to="/delivery" className="text-text-muted hover:text-white transition-colors">{t('delivery_policy.title')}</Link>
+                            <Link to="/refund" className="text-text-muted hover:text-primary transition-colors">{t('refund_policy.title')}</Link>
+                            <Link to="/exchange" className="text-text-muted hover:text-primary transition-colors">{t('exchange_policy.title')}</Link>
+                            <Link to="/shipping" className="text-text-muted hover:text-primary transition-colors">{t('shipping_policy.title')}</Link>
+                            <Link to="/delivery" className="text-text-muted hover:text-primary transition-colors">{t('delivery_policy.title')}</Link>
                         </div>
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="border-t border-text-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-text-muted text-sm">
                         {t('footer.copyright')}
                     </p>
 
                     <div className="flex items-center gap-6">
-                        <a href="#" className="text-text-muted hover:text-white transition-colors"><Twitter size={20} /></a>
-                        <a href="#" className="text-text-muted hover:text-white transition-colors"><Instagram size={20} /></a>
-                        <a href="#" className="text-text-muted hover:text-white transition-colors"><Linkedin size={20} /></a>
-                        <a href="#" className="text-text-muted hover:text-white transition-colors"><Github size={20} /></a>
+                        <a href="#" className="text-text-muted hover:text-primary transition-colors"><Twitter size={20} /></a>
+                        <a href="#" className="text-text-muted hover:text-primary transition-colors"><Instagram size={20} /></a>
+                        <a href="#" className="text-text-muted hover:text-primary transition-colors"><Linkedin size={20} /></a>
+                        <a href="#" className="text-text-muted hover:text-primary transition-colors"><Github size={20} /></a>
                     </div>
                 </div>
             </div>

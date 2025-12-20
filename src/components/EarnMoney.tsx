@@ -20,14 +20,14 @@ const EarnMoney = () => {
                     >
                         <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl opacity-20 blur-xl" />
-                            <div className={`relative bg-background border border-white/10 rounded-3xl p-8 overflow-hidden ${isRTL ? 'text-right' : 'text-left'}`}>
+                            <div className={`relative bg-background border border-text-primary/10 rounded-3xl p-8 overflow-hidden ${isRTL ? 'text-right' : 'text-left'}`}>
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
                                         <TrendingUp size={24} />
                                     </div>
                                     <div>
                                         <p className="text-text-secondary text-sm">{t('earn_money.total_earnings')}</p>
-                                        <h4 className={`text-3xl font-bold text-white ${isRTL ? 'text-right' : 'text-left'}`} dir="ltr">$4,250.00</h4>
+                                        <h4 className={`text-3xl font-bold text-text-primary ${isRTL ? 'text-right' : 'text-left'}`} dir="ltr">$4,250.00</h4>
                                     </div>
                                 </div>
 
@@ -40,7 +40,7 @@ const EarnMoney = () => {
                                         <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-surface hover:bg-white/5 transition-colors">
                                             <span className="text-green-400 font-bold" dir="ltr">{item.amount}</span>
                                             <div className="text-right">
-                                                <p className="font-semibold text-white">{item.label}</p>
+                                                <p className="font-semibold text-text-primary">{item.label}</p>
                                                 <p className="text-xs text-text-muted">{item.time}</p>
                                             </div>
                                         </div>
@@ -56,7 +56,7 @@ const EarnMoney = () => {
                         viewport={{ once: true }}
                         className={`order-1 md:order-2 ${isRTL ? 'text-right' : 'text-left'}`}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
                             {t('earn_money.title_start')} <br />
                             <span className="text-primary">{t('earn_money.title_highlight')}</span>
                         </h2>

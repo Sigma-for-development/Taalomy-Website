@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from './ThemeContext';
 import LogoImage from '../assets/images/no background text/textlogo-nobk.png';
+import LogoImageLight from '../assets/images/no background text/textlogo-lightbk.png';
 
 type LanguageContextType = {
     switchLanguage: (lang: string) => void;
@@ -13,6 +15,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const { i18n } = useTranslation();
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const { theme } = useTheme();
 
     // Set initial direction and title based on detected language
     React.useEffect(() => {
@@ -65,7 +68,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.2 }}
                         >
-                            <img src={LogoImage} alt="Taalomy Logo" className="w-64 h-auto" />
+                            <img src={theme === 'dark' ? LogoImage : LogoImageLight} alt="Taalomy Logo" className="w-64 h-auto" />
                         </motion.div>
                     </motion.div>
                 )}

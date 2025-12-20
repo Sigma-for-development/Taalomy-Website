@@ -5,8 +5,38 @@
 @tailwind utilities;
 
 @layer base {
+
+  :root,
+  .light {
+    /* Light Mode (Default variables, applied when 'light' class is present or no class) */
+    --bg-background: 248 250 252;
+    /* Slate 50 */
+    --bg-surface: 255 255 255;
+    /* White */
+    --text-primary: 15 23 42;
+    /* Slate 900 */
+    --text-secondary: 100 116 139;
+    /* Slate 500 */
+    --text-muted: 148 163 184;
+    /* Slate 400 */
+  }
+
+  .dark {
+    /* Dark Mode variables */
+    --bg-background: 10 10 10;
+    /* #0a0a0a */
+    --bg-surface: 26 26 26;
+    /* #1a1a1a */
+    --text-primary: 236 240 241;
+    /* #ecf0f1 */
+    --text-secondary: 189 195 199;
+    /* #bdc3c7 */
+    --text-muted: 149 165 166;
+    /* #95a5a6 */
+  }
+
   body {
-    @apply bg-background text-text-primary font-sans antialiased text-right;
-    direction: rtl;
+    @apply bg-background text-text-primary font-sans antialiased;
+    /* direction is handled by JS dynamically now, removing hardcoded rtl */
   }
 }

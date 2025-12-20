@@ -14,10 +14,10 @@ const FAQ = () => {
         <section className="py-20 bg-background">
             <div className="container mx-auto px-6 max-w-4xl">
                 <div className="text-center mb-16">
-                    <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-white mx-auto mb-6">
+                    <div className="w-16 h-16 bg-text-primary/5 rounded-2xl flex items-center justify-center text-text-primary mx-auto mb-6">
                         <HelpCircle size={32} />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white max-w-2xl mx-auto">{t('faq.title')}</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-text-primary max-w-2xl mx-auto">{t('faq.title')}</h2>
                 </div>
 
                 <div className="space-y-4">
@@ -28,14 +28,14 @@ const FAQ = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-surface/30 border border-white/5 rounded-2xl overflow-hidden"
+                            className="bg-surface/30 border border-text-primary/5 rounded-2xl overflow-hidden"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full p-6 flex items-center justify-between text-left gap-4 hover:bg-white/5 transition-colors"
                             >
-                                <span className={`font-bold text-lg text-white ${isRTL ? "text-right" : "text-left"}`}>{item.q}</span>
-                                <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${openIndex === index ? 'bg-primary text-white' : 'bg-white/10 text-text-secondary'}`}>
+                                <span className={`font-bold text-lg text-text-primary ${isRTL ? "text-right" : "text-left"}`}>{item.q}</span>
+                                <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${openIndex === index ? 'bg-primary text-white' : 'bg-text-primary/10 text-text-secondary'}`}>
                                     {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                                 </span>
                             </button>

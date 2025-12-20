@@ -10,6 +10,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import AnimatedBackground from './components/AnimatedBackground';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import './i18n';
 
 // Scroll to top on route change
@@ -30,30 +31,32 @@ function App() {
   }, [i18n.language]);
 
   return (
-    <LanguageProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-background text-text transition-colors duration-300 direction-control relative overflow-x-hidden" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
-          <AnimatedBackground />
-          <div className="relative z-10">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
-              <Route path="/privacy" element={<LegalPage translationKey="privacy_policy" />} />
-              <Route path="/refund" element={<LegalPage translationKey="refund_policy" />} />
-              <Route path="/exchange" element={<LegalPage translationKey="exchange_policy" />} />
-              <Route path="/shipping" element={<LegalPage translationKey="shipping_policy" />} />
-              <Route path="/delivery" element={<LegalPage translationKey="delivery_policy" />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer />
+    <ThemeProvider>
+      <LanguageProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen bg-background text-text transition-colors duration-300 direction-control relative overflow-x-hidden" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+            <AnimatedBackground />
+            <div className="relative z-10">
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
+                <Route path="/privacy" element={<LegalPage translationKey="privacy_policy" />} />
+                <Route path="/refund" element={<LegalPage translationKey="refund_policy" />} />
+                <Route path="/exchange" element={<LegalPage translationKey="exchange_policy" />} />
+                <Route path="/shipping" element={<LegalPage translationKey="shipping_policy" />} />
+                <Route path="/delivery" element={<LegalPage translationKey="delivery_policy" />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              <Footer />
+            </div>
           </div>
-        </div>
-      </Router>
-    </LanguageProvider>
+        </Router>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

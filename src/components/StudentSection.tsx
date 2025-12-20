@@ -18,7 +18,7 @@ const StudentSection = () => {
                         viewport={{ once: true }}
                     >
                         <span className="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">{t('downloads.student_label')}</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('student_section.title')}</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">{t('student_section.title')}</h2>
                         <p className="text-text-secondary text-lg max-w-2xl mx-auto">{t('student_section.subtitle')}</p>
                     </motion.div>
                 </div>
@@ -33,12 +33,12 @@ const StudentSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="bg-background border border-white/5 p-8 rounded-2xl hover:border-primary/30 transition-colors group"
+                                className="bg-background border border-text-primary/5 p-8 rounded-2xl hover:border-primary/30 transition-colors group"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                                     <Icon size={24} />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                                <h3 className="text-xl font-bold text-text-primary mb-4">{feature.title}</h3>
                                 <p className="text-text-secondary leading-relaxed">{feature.desc}</p>
                             </motion.div>
                         );

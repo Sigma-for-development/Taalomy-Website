@@ -19,7 +19,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className={isRTL ? "text-right" : "text-left"}
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                    <h1 className="text-5xl md:text-7xl font-bold text-text-primary leading-tight mb-6">
                         {t('hero.title_start')} <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light" >
                             {t('hero.title_end')}
@@ -34,7 +34,7 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 bg-white text-background rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all"
+                            className="px-8 py-4 bg-white text-slate-900 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all"
                         >
                             <Smartphone className="w-5 h-5" />
                             {t('hero.download_btn')}
@@ -43,7 +43,7 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => document.getElementById('students')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 bg-surface border border-white/10 text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-white/5 transition-all"
+                            className="px-8 py-4 bg-surface border border-text-primary/10 text-text-primary rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-text-primary/5 transition-all"
                         >
                             {isRTL ? (
                                 <>

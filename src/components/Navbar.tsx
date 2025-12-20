@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download, Globe } from 'lucide-react';
+import { Menu, X, Download, Globe, Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import LogoImage from '../assets/images/no background text/textlogo-nobk.png';
+import LogoImageLight from '../assets/images/no background text/textlogo-lightbk.png';
 
 const Navbar = () => {
     // ... existing hooks
@@ -11,6 +13,7 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const { switchLanguage } = useLanguage();
+    const { theme, toggleTheme } = useTheme();
     const isRTL = i18n.language === 'ar';
 
     useEffect(() => {
@@ -42,7 +45,7 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-background/80 backdrop-blur-lg border-b border-white/10 py-4'
+                ? 'bg-background/80 backdrop-blur-lg border-b border-text-primary/10 py-4'
                 : 'bg-transparent py-6'
                 }`}
         >
@@ -53,7 +56,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 cursor-pointer"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                    <img src={LogoImage} alt="Taalomy Logo" className="h-8 md:h-10 w-auto" />
+                    <img src={theme === 'dark' ? LogoImage : LogoImageLight} alt="Taalomy Logo" className="h-8 md:h-10 w-auto" />
                 </motion.div>
 
                 {/* Desktop Menu */}
@@ -73,8 +76,16 @@ const Navbar = () => {
                     ))}
 
                     <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full hover:bg-text-primary/5 text-text-secondary hover:text-primary transition-colors"
+                        aria-label="Toggle theme"
+                    >
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+
+                    <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 text-text-secondary hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
                     >
                         <Globe size={18} />
                         <span className="text-sm font-medium uppercase">{isRTL ? 'English' : 'العربية'}</span>
@@ -107,7 +118,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-surface border-b border-white/10"
+                        className="md:hidden bg-surface border-b border-text-primary/10"
                     >
                         <div className="flex flex-col p-6 gap-4">
                             {navLinks.map((item) => (
@@ -124,16 +135,27 @@ const Navbar = () => {
                                     {item.name}
                                 </a>
                             ))}
-                            <button
-                                onClick={() => {
-                                    toggleLanguage();
-                                    setIsMobileMenuOpen(false);
-                                }}
-                                className="flex items-center gap-2 text-text-secondary hover:text-white py-2"
-                            >
-                                <Globe size={18} />
-                                <span className="font-medium">{isRTL ? 'English' : 'العربية'}</span>
-                            </button>
+                            <div className="flex items-center justify-between border-t border-text-primary/5 pt-4 mt-2">
+                                <button
+                                    onClick={() => {
+                                        toggleLanguage();
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className="flex items-center gap-2 text-text-secondary hover:text-primary py-2"
+                                >
+                                    <Globe size={18} />
+                                    <span className="font-medium">{isRTL ? 'English' : 'العربية'}</span>
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        toggleTheme();
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className="p-2 rounded-full hover:bg-text-primary/5 text-text-secondary hover:text-primary transition-colors"
+                                >
+                                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                                </button>
+                            </div>
                             <button
                                 onClick={() => {
                                     document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' });

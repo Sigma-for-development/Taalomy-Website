@@ -47,7 +47,7 @@ const Features = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold text-white mb-4"
+                        className="text-3xl md:text-5xl font-bold text-text-primary mb-4"
                     >
                         {t('features.title')}
                     </motion.h2>
@@ -65,12 +65,12 @@ const Features = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className={`p-8 rounded-2xl bg-surface border border-white/5 hover:border-primary/50 transition-colors group ${isRTL ? 'text-right' : 'text-left'}`}
+                            className={`p-8 rounded-2xl bg-surface border border-text-primary/5 hover:border-primary/50 transition-colors group ${isRTL ? 'text-right' : 'text-left'}`}
                         >
                             <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ring-1 ring-white/10 group-hover:bg-primary/20 transition-colors">
                                 {feature.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
                                 {feature.title}
                             </h3>
                             <p className="text-text-secondary leading-relaxed">

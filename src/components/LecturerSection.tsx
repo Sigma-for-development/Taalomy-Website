@@ -18,7 +18,7 @@ const LecturerSection = () => {
                         className={isRTL ? "text-right" : "text-left"}
                     >
                         <span className="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">{t('downloads.lecturer_label')}</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('lecturer_section.title')}</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">{t('lecturer_section.title')}</h2>
                         <p className="text-text-secondary text-lg mb-8">{t('lecturer_section.subtitle')}</p>
 
                         <div className="space-y-8">
@@ -27,7 +27,7 @@ const LecturerSection = () => {
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">{t('lecturer_section.verification.title')}</h3>
+                                    <h3 className="text-xl font-bold text-text-primary mb-2">{t('lecturer_section.verification.title')}</h3>
                                     <p className="text-text-secondary">{t('lecturer_section.verification.desc')}</p>
                                 </div>
                             </div>
@@ -37,16 +37,16 @@ const LecturerSection = () => {
                                     <Banknote size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">{t('lecturer_section.payments.title')}</h3>
+                                    <h3 className="text-xl font-bold text-text-primary mb-2">{t('lecturer_section.payments.title')}</h3>
                                     <p className="text-text-secondary">{t('lecturer_section.payments.desc')}</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 gap-4 mt-12 bg-surface/30 p-6 rounded-2xl border border-white/5">
+                        <div className="grid sm:grid-cols-2 gap-4 mt-12 bg-surface/30 p-6 rounded-2xl border border-text-primary/5">
                             {features.map((item, idx) => (
                                 <div key={idx} className="space-y-2">
-                                    <div className="flex items-center gap-2 text-white font-bold">
+                                    <div className="flex items-center gap-2 text-text-primary font-bold">
                                         {idx === 0 ? <UserCheck size={18} /> : <CalendarClock size={18} />}
                                         {item.title}
                                     </div>
@@ -63,10 +63,10 @@ const LecturerSection = () => {
                         className="relative"
                     >
                         {/* Placeholder for Lecturer Dashboard UI */}
-                        <div className="relative z-10 bg-surface border border-white/10 rounded-3xl p-6 shadow-2xl">
+                        <div className="relative z-10 bg-surface border border-text-primary/10 rounded-3xl p-6 shadow-2xl">
                             <div className="flex items-center justify-between mb-8">
                                 <div>
-                                    <h4 className="text-white font-bold">Dashboard</h4>
+                                    <h4 className="text-text-primary font-bold">Dashboard</h4>
                                     <p className="text-text-secondary text-sm">Welcome back, Dr. Ahmed</p>
                                 </div>
                                 <div className="w-10 h-10 rounded-full bg-white/10" />
@@ -75,11 +75,11 @@ const LecturerSection = () => {
                             <div className="grid grid-cols-2 gap-4 mb-8">
                                 <div className="bg-primary/20 p-4 rounded-xl border border-primary/30">
                                     <p className="text-primary text-xs mb-1">Total Earnings</p>
-                                    <p className="text-2xl font-bold text-white">$4,250</p>
+                                    <p className="text-2xl font-bold text-text-primary">$4,250</p>
                                 </div>
                                 <div className="bg-primary/20 p-4 rounded-xl border border-primary/30">
                                     <p className="text-primary-light text-xs mb-1">Upcoming Classes</p>
-                                    <p className="text-2xl font-bold text-white">12</p>
+                                    <p className="text-2xl font-bold text-text-primary">12</p>
                                 </div>
                             </div>
 
