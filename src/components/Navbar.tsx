@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download, Globe, Moon, Sun } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -15,6 +16,8 @@ const Navbar = () => {
     const { switchLanguage } = useLanguage();
     const { theme, toggleTheme } = useTheme();
     const isRTL = i18n.language === 'ar';
+    const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +32,14 @@ const Navbar = () => {
     };
 
     const scrollToSection = (href: string) => {
-        const element = document.getElementById(href.replace('#', ''));
+        const targetId = href.replace('#', '');
+
+        if (location.pathname !== '/') {
+            navigate('/', { state: { scrollTo: targetId } });
+            return;
+        }
+
+        const element = document.getElementById(targetId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -94,7 +104,7 @@ const Navbar = () => {
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => scrollToSection('#download')}
                         className="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-colors"
                     >
                         <Download size={18} />
@@ -158,7 +168,7 @@ const Navbar = () => {
                             </div>
                             <button
                                 onClick={() => {
-                                    document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' });
+                                    scrollToSection('#download');
                                     setIsMobileMenuOpen(false);
                                 }}
                                 className="flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold w-full"
