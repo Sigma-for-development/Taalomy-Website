@@ -30,7 +30,7 @@ const Contact = () => {
                     className={`grid md:grid-cols-2 gap-16 ${isRTL ? "text-right" : "text-left"}`}
                 >
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                             {t('contact_us.title')}
                         </h1>
                         <p className="text-text-secondary text-lg mb-12">
@@ -43,7 +43,7 @@ const Contact = () => {
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold text-lg mb-1">{t('contact_us.address_label')}</h3>
+                                    <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-1">{t('contact_us.address_label')}</h3>
                                     <p className="text-text-secondary">{t('contact_us.address')}</p>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                                     <Mail size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold text-lg mb-1">{t('contact_us.email_label')}</h3>
+                                    <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-1">{t('contact_us.email_label')}</h3>
                                     <p className="text-text-secondary">support@taalomy.com</p>
                                 </div>
                             </div>
@@ -63,20 +63,20 @@ const Contact = () => {
                                     <Phone size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold text-lg mb-1">{t('contact_us.phone_label')}</h3>
+                                    <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-1">{t('contact_us.phone_label')}</h3>
                                     <p className="text-text-secondary" dir="ltr">+20 100 000 0000</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mt-12 border-l-4 border-yellow-500 bg-yellow-500/5 p-6 rounded-r-xl">
-                            <p className="text-yellow-200 text-sm font-medium">
+                            <p className="text-yellow-700 dark:text-yellow-200 text-sm font-medium">
                                 {t('disclaimer')}
                             </p>
                         </div>
                     </div>
 
-                    <div className="bg-surface border border-white/5 rounded-3xl p-8 relative overflow-hidden">
+                    <div className="bg-surface border border-gray-200 dark:border-white/5 rounded-3xl p-8 relative overflow-hidden">
                         {isSubmitted ? (
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -86,32 +86,32 @@ const Contact = () => {
                                 <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center text-green-500 mb-6">
                                     <CheckCircle size={40} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
                                 <p className="text-text-secondary">We'll get back to you shortly.</p>
                             </motion.div>
                         ) : null}
 
-                        <h3 className="text-2xl font-bold text-white mb-6">{t('contact_us.form.title')}</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t('contact_us.form.title')}</h3>
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-text-secondary text-sm font-medium mb-2">{t('contact_us.form.name')}</label>
-                                    <input required type="text" className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors" />
+                                    <input required type="text" className="w-full bg-background/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:outline-none transition-colors" />
                                 </div>
                                 <div>
                                     <label className="block text-text-secondary text-sm font-medium mb-2">{t('contact_us.form.email')}</label>
-                                    <input required type="email" className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors" />
+                                    <input required type="email" className="w-full bg-background/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:outline-none transition-colors" />
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block text-text-secondary text-sm font-medium mb-2">{t('contact_us.form.subject')}</label>
-                                <input required type="text" className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors" />
+                                <input required type="text" className="w-full bg-background/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:outline-none transition-colors" />
                             </div>
 
                             <div>
                                 <label className="block text-text-secondary text-sm font-medium mb-2">{t('contact_us.form.message')}</label>
-                                <textarea required rows={5} className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary focus:outline-none transition-colors" />
+                                <textarea required rows={5} className="w-full bg-background/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary focus:outline-none transition-colors" />
                             </div>
 
                             <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors">

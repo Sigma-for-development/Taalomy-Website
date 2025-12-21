@@ -25,7 +25,7 @@ const SupportSection = () => {
 
                         <a
                             href="mailto:support@taalomy.com"
-                            className="inline-flex bg-white text-slate-900 px-8 py-4 rounded-xl font-bold items-center justify-center gap-3 mx-auto hover:scale-105 transition-transform"
+                            className="inline-flex bg-white text-slate-900 px-8 py-4 rounded-xl font-bold items-center justify-center gap-3 mx-auto hover:scale-105 transition-transform shadow-lg border border-gray-100"
                         >
                             <MessageCircle size={20} />
                             {t('support_section.cta')}

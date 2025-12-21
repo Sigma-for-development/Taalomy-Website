@@ -62,14 +62,13 @@ const LecturerSection = () => {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        {/* Placeholder for Lecturer Dashboard UI */}
                         <div className="relative z-10 bg-surface border border-text-primary/10 rounded-3xl p-6 shadow-2xl">
                             <div className="flex items-center justify-between mb-8">
                                 <div>
                                     <h4 className="text-text-primary font-bold">Dashboard</h4>
                                     <p className="text-text-secondary text-sm">Welcome back, Dr. Ahmed</p>
                                 </div>
-                                <div className="w-10 h-10 rounded-full bg-white/10" />
+                                <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10" />
                             </div>
 
                             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -85,11 +84,11 @@ const LecturerSection = () => {
 
                             <div className="space-y-4">
                                 {[1, 2, 3].map(i => (
-                                    <div key={i} className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors">
-                                        <div className="w-10 h-10 rounded-lg bg-white/5" />
+                                    <div key={i} className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                        <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/5" />
                                         <div className="flex-1">
-                                            <div className="h-3 w-24 bg-white/20 rounded mb-2" />
-                                            <div className="h-2 w-16 bg-white/10 rounded" />
+                                            <div className="h-3 w-24 bg-gray-200 dark:bg-white/20 rounded mb-2" />
+                                            <div className="h-2 w-16 bg-gray-100 dark:bg-white/10 rounded" />
                                         </div>
                                     </div>
                                 ))}

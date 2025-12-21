@@ -33,7 +33,7 @@ const StudentSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="bg-background border border-text-primary/5 p-8 rounded-2xl hover:border-primary/30 transition-colors group"
+                                className="bg-background border border-gray-200 dark:border-text-primary/10 p-8 rounded-2xl hover:border-primary/30 transition-colors group"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                                     <Icon size={24} />

@@ -102,7 +102,7 @@ const AnimatedBackground = () => {
             className="fixed inset-0 w-full h-full pointer-events-none"
             style={{
                 zIndex: 0,
-                opacity: theme === 'dark' ? 0.4 : 0.15 // Lower opacity for black dots in light mode
+                opacity: theme === 'dark' ? 0.4 : 0.3 // Increased opacity for better visibility in light mode
             }}
         />
     );

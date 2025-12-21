@@ -23,19 +23,19 @@ const LegalPage = ({ translationKey }: LegalPageProps) => {
                     animate={{ opacity: 1, y: 0 }}
                     className={isRTL ? "text-right" : "text-left"}
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
                         {t(`${translationKey}.title`)}
                     </h1>
 
                     <div className="prose prose-invert prose-lg max-w-none">
-                        <div className="bg-surface/30 border border-white/5 rounded-2xl p-8 mb-8">
+                        <div className="bg-surface/30 border border-gray-200 dark:border-white/5 rounded-2xl p-8 mb-8">
                             <p className="text-text-secondary leading-relaxed whitespace-pre-line text-lg">
                                 {t(`${translationKey}.content`)}
                             </p>
                         </div>
 
                         <div className="border-l-4 border-yellow-500 bg-yellow-500/5 p-6 rounded-r-xl">
-                            <p className="text-yellow-200 text-sm font-medium">
+                            <p className="text-yellow-700 dark:text-yellow-200 text-sm font-medium">
                                 {t('disclaimer')}
                             </p>
                         </div>

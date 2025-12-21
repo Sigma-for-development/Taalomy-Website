@@ -68,7 +68,6 @@ const Hero = () => {
                     {/* Image will be inserted here */}
                     <div className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border-8 border-surface shadow-2xl bg-surface/50 backdrop-blur-sm flex items-center justify-center group">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        {/* Placeholder for generated image */}
                         <img src="/taalomy_app_showcase.png" alt="App Interface" className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105" />
                     </div>
                 </motion.div>
