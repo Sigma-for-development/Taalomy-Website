@@ -54,7 +54,6 @@ function App() {
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/test-error" element={<TestError />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
