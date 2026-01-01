@@ -1,17 +1,29 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import LegalPage from './pages/Legal';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import NotFound from './pages/NotFound';
-import AnimatedBackground from './components/AnimatedBackground';
-import { LanguageProvider } from './contexts/LanguageContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { Navbar, Footer, AnimatedBackground } from './components';
+import { LanguageProvider, ThemeProvider } from './contexts';
 import './i18n';
+
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const LegalPage = lazy(() => import('./pages/Legal'));
+const Contact = lazy(() => import('./pages/Contact'));
+const About = lazy(() => import('./pages/About'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Temporary component for testing error boundary
+const TestError = () => {
+  throw new Error("This is a test error to verify the Error Boundary.");
+  return null;
+};
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+  </div>
+);
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -39,18 +51,21 @@ function App() {
             <AnimatedBackground />
             <div className="relative z-10">
               <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
-                <Route path="/privacy" element={<LegalPage translationKey="privacy_policy" />} />
-                <Route path="/refund" element={<LegalPage translationKey="refund_policy" />} />
-                <Route path="/exchange" element={<LegalPage translationKey="exchange_policy" />} />
-                <Route path="/shipping" element={<LegalPage translationKey="shipping_policy" />} />
-                <Route path="/delivery" element={<LegalPage translationKey="delivery_policy" />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/test-error" element={<TestError />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
+                  <Route path="/privacy" element={<LegalPage translationKey="privacy_policy" />} />
+                  <Route path="/refund" element={<LegalPage translationKey="refund_policy" />} />
+                  <Route path="/exchange" element={<LegalPage translationKey="exchange_policy" />} />
+                  <Route path="/shipping" element={<LegalPage translationKey="shipping_policy" />} />
+                  <Route path="/delivery" element={<LegalPage translationKey="delivery_policy" />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
               <Footer />
             </div>
           </div>

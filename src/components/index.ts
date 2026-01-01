@@ -1,0 +1,12 @@
+export { default as AnimatedBackground } from './AnimatedBackground';
+export { default as AppDownloads } from './AppDownloads';
+export { default as FAQ } from './FAQ';
+export { default as Features } from './Features';
+export { default as Footer } from './Footer';
+export { default as Hero } from './Hero';
+export { default as HowItWorks } from './HowItWorks';
+export { default as LecturerSection } from './LecturerSection';
+export { default as Navbar } from './Navbar';
+export { default as SEO } from './SEO';
+export { default as StudentSection } from './StudentSection';
+export { default as SupportSection } from './SupportSection';
