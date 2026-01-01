@@ -83,12 +83,16 @@
                 "a": "We prioritize quality and safety. Our verification team typically reviews documents within 24-48 hours. You will be notified via email once approved."
             },
             {
-                "q": "Can I cancel a booked session?",
-                "a": "Yes. Students can cancel up to 24 hours before the session for a full refund. Please refer to our Refund Policy for more details."
-            },
-            {
                 "q": "Is the app free to download?",
                 "a": "Yes! The Taalomy app is free to download for both students and lecturers. Students only pay when booking sessions, and lecturers keep the majority of their earnings."
+            },
+            {
+                "q": "Which devices does the Taalomy app support?",
+                "a": "Taalomy is optimized for both iOS and Android. You can download the app on iPhone, iPad, and all major Android smartphones and tablets."
+            },
+            {
+                "q": "Do I need Zoom or Teams to attend classes?",
+                "a": "No external apps are required! All video sessions and classrooms are built directly into the Taalomy app for a seamless, secure experience."
             }
         ]
     },

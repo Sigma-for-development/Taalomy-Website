@@ -64,7 +64,13 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center gap-2 cursor-pointer"
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() => {
+                        if (location.pathname === '/') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            navigate('/');
+                        }
+                    }}
                 >
                     <img src={theme === 'dark' ? LogoImage : LogoImageLight} alt="Taalomy Logo" className="h-8 md:h-10 w-auto" />
                 </motion.div>
