@@ -63,7 +63,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: isRTL ? -50 : 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="relative hidden md:block"
+                    className="relative block mt-12 md:mt-0"
                 >
                     {/* Image will be inserted here */}
                     <div className="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border-8 border-surface shadow-2xl bg-surface/50 backdrop-blur-sm flex items-center justify-center group">
