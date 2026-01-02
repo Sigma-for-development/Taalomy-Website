@@ -50,7 +50,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             {[
                                 { label: t('footer.links.about'), href: '/about' },
-                                { label: t('footer.links.careers'), href: '/about' },
+                                { label: t('footer.links.careers'), href: '/careers' },
                                 { label: t('footer.links.contact'), href: '/contact' },
                                 { label: t('footer.links.privacy'), href: '/privacy' }
                             ].map(item => (

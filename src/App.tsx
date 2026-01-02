@@ -10,13 +10,14 @@ const Home = lazy(() => import('./pages/Home'));
 const LegalPage = lazy(() => import('./pages/Legal'));
 const Contact = lazy(() => import('./pages/Contact'));
 const About = lazy(() => import('./pages/About'));
+const Career = lazy(() => import('./pages/Career'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Temporary component for testing error boundary
-const TestError = () => {
-  throw new Error("This is a test error to verify the Error Boundary.");
-  return null;
-};
+// // Temporary component for testing error boundary
+// const TestError = () => {
+//   throw new Error("This is a test error to verify the Error Boundary.");
+//   return null;
+// };
 
 // Loading component
 const PageLoader = () => (
@@ -55,6 +56,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="/careers" element={<Career />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/legal" element={<LegalPage translationKey="privacy_policy" />} />
                   <Route path="/privacy" element={<LegalPage translationKey="privacy_policy" />} />

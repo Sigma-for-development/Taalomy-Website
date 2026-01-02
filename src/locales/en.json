@@ -215,6 +215,12 @@
             "privacy": "Privacy Policy"
         }
     },
+    "careers": {
+        "title": "Careers",
+        "no_openings_title": "No Job Openings",
+        "no_openings_desc": "We currently have no job openings available. Please check back later.",
+        "future_opportunities": "However, we are always on the lookout for exceptional talent. If you believe you would be a great fit for our team, please send your resume and cover letter to details."
+    },
     "disclaimer": "LEGAL DISCLAIMER AND LIMITATION OF LIABILITY\n\nUsers acknowledge and agree that they use the Taalomy platform and services at their own sole risk. Taalomy is a facilitator of educational connections and does not guarantee the quality, accuracy, or safety of services provided by third-party lecturers or users.\n\nTo the fullest extent permitted by law, Taalomy, its officers, directors, employees, and agents disclaim all warranties, express or implied, in connection with the site and your use thereof. We are not obligated to intervene in disputes between users but may choose to do so at our sole discretion to ensure platform integrity.",
     "about_us": {
         "title": "About Us",
