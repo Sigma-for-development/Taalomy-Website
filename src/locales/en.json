@@ -216,10 +216,44 @@
         }
     },
     "careers": {
-        "title": "Careers",
-        "no_openings_title": "No Job Openings",
-        "no_openings_desc": "We currently have no job openings available. Please check back later.",
-        "future_opportunities": "However, we are always on the lookout for exceptional talent. If you believe you would be a great fit for our team, please send your resume and cover letter to details."
+        "title": "Join Our Team",
+        "subtitle": "Help us shape the future of education in the MENA region.",
+        "open_positions_title": "Open Positions",
+        "open_positions": [
+            {
+                "id": "se-intern",
+                "title": "Software Engineering Intern",
+                "type": "Internship (Unpaid)",
+                "location": "Fully Remote",
+                "department": "Engineering",
+                "description": "We are looking for a passionate Software Engineering Intern to join our dynamic team. This internship is designed for university students seeking to fulfill their academic internship requirements. You will work on real-world projects involving our mobile and web applications.",
+                "requirements": [
+                    "Must be a current university student (University Requirement)",
+                    "Strong knowledge of React Native and React.js",
+                    "Experience with Python and Django",
+                    "Familiarity with PostgreSQL",
+                    "Strong problem-solving skills and discipline",
+                    "Ability to work effectively in a remote team environment"
+                ]
+            },
+            {
+                "id": "mkt-intern",
+                "title": "Marketing Intern",
+                "type": "Internship (Unpaid)",
+                "location": "Fully Remote",
+                "department": "Marketing",
+                "description": "We are seeking a creative Marketing Intern to assist in our growth strategies. This position is ideal for students who need to complete a mandatory internship for their degree. You will gain hands-on experience in digital marketing campaigns.",
+                "requirements": [
+                    "Must be a current university student (University Requirement)",
+                    "Knowledge of Digital Ads (Meta, Google, etc.)",
+                    "Experience with Media Buying",
+                    "Understanding of SEO best practices",
+                    "Strong problem-solving skills and discipline",
+                    "Ability to work effectively in a remote team environment"
+                ]
+            }
+        ],
+        "future_opportunities": "Don't see a perfect fit? We are always on the lookout for exceptional talent. Please send your resume and cover letter to details."
     },
     "disclaimer": "LEGAL DISCLAIMER AND LIMITATION OF LIABILITY\n\nUsers acknowledge and agree that they use the Taalomy platform and services at their own sole risk. Taalomy is a facilitator of educational connections and does not guarantee the quality, accuracy, or safety of services provided by third-party lecturers or users.\n\nTo the fullest extent permitted by law, Taalomy, its officers, directors, employees, and agents disclaim all warranties, express or implied, in connection with the site and your use thereof. We are not obligated to intervene in disputes between users but may choose to do so at our sole discretion to ensure platform integrity.",
     "about_us": {
