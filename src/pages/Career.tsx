@@ -20,11 +20,46 @@ const Career = () => {
     const positions = (t('careers.open_positions', { returnObjects: true }) as JobPosition[]) || [];
     const hasPositions = Array.isArray(positions) && positions.length > 0;
 
+    // Generate JobPosting Schema
+    const jobSchema = hasPositions ? positions.map(job => ({
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": job.title,
+        "description": job.description,
+        "identifier": {
+            "@type": "PropertyValue",
+            "name": "Taalomy",
+            "value": job.id
+        },
+        "datePosted": new Date().toISOString().split('T')[0],
+        "validThrough": new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0],
+        "employmentType": "INTERN",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Taalomy",
+            "sameAs": "https://taalomy.com",
+            "logo": "https://taalomy.com/taalomy-icon.png"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "EG"
+            }
+        },
+        "applicantLocationRequirements": {
+            "@type": "Country",
+            "name": "Remote"
+        },
+        "jobLocationType": "TELECOMMUTE"
+    })) : null;
+
     return (
         <div className="pt-32 pb-20 min-h-screen flex flex-col items-center">
             <SEO
                 title={t('careers.title')}
                 description={t('careers.subtitle')}
+                schema={jobSchema ? JSON.stringify(jobSchema) : undefined}
             />
             <div className="container mx-auto px-6">
                 <motion.div

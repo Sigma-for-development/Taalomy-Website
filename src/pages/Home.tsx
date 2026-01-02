@@ -1,10 +1,27 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Hero, AppDownloads, HowItWorks, StudentSection, LecturerSection, FAQ, SupportSection } from '../components';
 
 const Home = () => {
+    const { t } = useTranslation();
     const location = useLocation();
+
+    // FAQ Schema Generation
+    const faqItems = (t('faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.a
+            }
+        }))
+    };
 
     useEffect(() => {
         if (location.state && location.state.scrollTo) {
@@ -12,16 +29,18 @@ const Home = () => {
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
-            // Optional: Clear state to prevent scrolling on subsequent renders if needed, 
-            // but react-router state persists on refresh, so it might be fine or we might want to clear it.
-            // For now, let's leave it as is.
             window.history.replaceState({}, document.title)
         }
     }, [location]);
 
     return (
         <main>
-            <SEO />
+            <SEO
+                title="Home"
+                description="The #1 App for Universities in MENA. Connect with top lecturers, manage your schedule, and ace your exams."
+                keywords="university app, student companion, lecturer booking, mena education, private tutoring, exam preparation"
+                schema={JSON.stringify(faqSchema)}
+            />
             <Hero />
             <HowItWorks />
             <AppDownloads />
