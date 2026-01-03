@@ -4,6 +4,12 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    allowedHosts: ["taalomy-website-production.up.railway.app", "taalomy.com"]
+  },
+  preview: {
+    allowedHosts: ["taalomy-website-production.up.railway.app", "taalomy.com"]
+  },
   build: {
     rollupOptions: {
       output: {
