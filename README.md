@@ -2,7 +2,7 @@
   <img src="public/taalomy-icon.png" alt="Taalomy Icon" width="120" height="auto" />
   <br />
   <img src="src/assets/images/no%20background%20text/textlogo-nobk.png" alt="Taalomy Logo" width="500" height="auto" />
-  <h1>Taalomy | The #1 App for Universities</h1>
+  <h1>Taalomy | The #1 App for Universities and Individuals</h1>
   
   <p>
     <strong>Education, Reimagined.</strong><br>
@@ -28,13 +28,13 @@
 
 <br />
 
-## 🚀 Overview
+## Overview
 
 **Taalomy** is a premier educational technology platform designed to transform the academic landscape in the MENA region. By bridging the gap between students and lecturers, Taalomy eliminates administrative friction and empowers true learning.
 
 This repository contains the source code for the public-facing **Taalomy Website**, a high-performance Single Page Application (SPA) that serves as the primary gateway for users to discover, download, and engage with the platform.
 
-## ✨ Key Features
+## Key Features
 
 - **Global Visualization**: Stunning, animated background with interactive particles using HTML5 Canvas.
 - **Role-Based Experience**: Dedicated flows for Students and Lecturers.
@@ -46,7 +46,7 @@ This repository contains the source code for the public-facing **Taalomy Website
 - **Job Listings**: Integrated Career page with detailed internship opportunities.
 - **Responsive Design**: Mobile-first architecture ensuring flawless experience on all devices.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Core**: React 19, TypeScript
 - **Build Tool**: Vite
@@ -57,7 +57,7 @@ This repository contains the source code for the public-facing **Taalomy Website
 - **SEO**: React Helmet Async
 - **Icons**: Lucide React
 
-## 🏁 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## 📦 Building for Production
+## Building for Production
 
 Create a production-ready build (optimized, minified, and hashed):
 ```bash
@@ -93,7 +93,7 @@ npm run build
 ```
 The output will be in the `dist` folder.
 
-## ☁️ Deployment
+## Deployment
 
 This project is optimized for deployment on **AWS S3** and **CloudFront**.
 
@@ -104,7 +104,7 @@ This project is optimized for deployment on **AWS S3** and **CloudFront**.
 
 > See the full [Deployment Guide](deployment_guide.md) for detailed instructions on S3 configuration, OAC, and SSL setup.
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
@@ -119,13 +119,13 @@ src/
 └── main.tsx        # Entry point
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1.  Clone the repo and create a new branch: `git checkout -b feature/amazing-feature`.
 2.  Commit your changes: `git commit -m 'Add some amazing feature'`.
 3.  Push to the branch: `git push origin feature/amazing-feature`.
 4.  Open a Pull Request.
 
-## 📄 License
+## License
 
 Private - All rights reserved. © 2026 Taalomy Inc.
