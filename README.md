@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/taalomy-icon.png" alt="Taalomy Logo" width="120" height="auto" />
+  <img src="src/assets/images/no%20background%20text/textlogo-nobk.png" alt="Taalomy Logo" width="120" height="auto" />
   <h1>Taalomy | The #1 App for Universities</h1>
   
   <p>
