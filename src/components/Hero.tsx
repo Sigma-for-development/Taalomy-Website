@@ -8,9 +8,19 @@ const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
-            {/* Background Gradients */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+            {/* Background Gradients - Optimized for performance using radial gradients instead of blurs */}
+            <div
+                className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"
+                style={{
+                    background: 'radial-gradient(circle, rgba(var(--primary-rgb), 0.15) 0%, rgba(var(--primary-rgb), 0) 70%)'
+                }}
+            />
+            <div
+                className="absolute bottom-0 left-0 w-[800px] h-[800px] rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none"
+                style={{
+                    background: 'radial-gradient(circle, rgba(var(--primary-rgb), 0.08) 0%, rgba(var(--primary-rgb), 0) 70%)'
+                }}
+            />
 
             <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
                 <motion.div

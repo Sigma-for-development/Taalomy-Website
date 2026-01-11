@@ -19,6 +19,8 @@
     /* Slate 500 */
     --text-muted: 148 163 184;
     /* Slate 400 */
+    --primary-rgb: 52 152 219;
+    /* #3498db - Matching Tailwind Config */
   }
 
   .dark {

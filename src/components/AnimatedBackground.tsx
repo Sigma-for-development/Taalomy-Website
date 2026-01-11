@@ -52,7 +52,7 @@ const AnimatedBackground = () => {
         const initParticles = () => {
             particles = [];
             // Create a grid of dots
-            const spacing = 40; // Pixel spacing between dots
+            const spacing = 80; // Increased spacing to reduce particle count for better performance
             const rows = Math.ceil(canvas.height / spacing);
             const cols = Math.ceil(canvas.width / spacing);
 
